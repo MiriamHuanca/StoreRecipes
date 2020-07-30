@@ -20,6 +20,7 @@ import {ShoppingListService} from './shopping-list/shopping-list.service';
 import {RecipeService} from './recipes/recipe.service';
 
 import {AppRoutingModule} from './app-routing.module';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {AppRoutingModule} from './app-routing.module';
     DropdownDirective,
     // component of pdf
     GegerarPdfComponent,
-    GenerarJspdfComponent
+    GenerarJspdfComponent,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,

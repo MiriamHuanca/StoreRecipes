@@ -17,6 +17,14 @@ export class RecipeService {
         new Ingredient('Meat', 1),
         new Ingredient('French Fries', 3)
       ]),
+    new Recipe(
+      'Spaghetti',
+      'Huge Pile Of Spaghetti On Plate And Twirled',
+      'https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2018/09/receta-facil-de-salsa-roja-para-espagueti.jpg',
+      [
+        new Ingredient('Meat', 10),
+        new Ingredient('Spaghetti', 15)
+      ]),
     {
       name: 'A test Recipe 2',
       description: 'This is simply a test 2',

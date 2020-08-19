@@ -50,7 +50,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     // module of pdf
     PdfViewerModule,
   ],
-  providers: [ShoppingListService, RecipeService],
+  providers: [ShoppingListService, RecipeService], // the service is correctly here
   bootstrap: [AppComponent]
 })
 export class AppModule {

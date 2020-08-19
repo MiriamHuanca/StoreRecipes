@@ -6,6 +6,7 @@ import {Subject} from 'rxjs';
 
 @Injectable()
 export class RecipeService {
+  recipesChanged = new Subject<Recipe[]>();
 
   private recipes: Recipe[] = [
     new Recipe(
@@ -19,7 +20,7 @@ export class RecipeService {
     {
       name: 'A test Recipe 2',
       description: 'This is simply a test 2',
-      imagePath: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',
+      imagePath: 'https://tvazteca.brightspotcdn.com/dims4/default/7e6560c/2147483647/strip/true/crop/1068x660+0+0/resize/968x598!/format/jpg/quality/80/?url=https%3A%2F%2Ftvazteca.brightspotcdn.com%2F97%2F7d%2Fcffd3c31ec0d2b9d8f999300cb48%2Fel-conde-de-sandwich.jpg',
       ingredients: [
         new Ingredient('Bruns', 2),
         new Ingredient('Meat', 20),
@@ -40,5 +41,15 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredient: Ingredient[]) {
     this.slService.addIngredients(ingredient);
+  }
+
+  addRecipe(recipe: Recipe) {
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe) {
+    this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
   }
 }

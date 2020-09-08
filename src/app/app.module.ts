@@ -22,6 +22,7 @@ import {RecipeService} from './recipes/recipe.service';
 import {AppRoutingModule} from './app-routing.module';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import {DataStorageService} from "./shared/data-storage.service";
 
 
 @NgModule({
@@ -49,8 +50,10 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
     AppRoutingModule,
     // module of pdf
     PdfViewerModule,
+    // for service
+    HttpClientModule
   ],
-  providers: [ShoppingListService, RecipeService], // the service is correctly here
+  providers: [ShoppingListService, RecipeService, DataStorageService], // the service is correctly here
   bootstrap: [AppComponent]
 })
 export class AppModule {

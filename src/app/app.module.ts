@@ -53,7 +53,7 @@ import {DataStorageService} from "./shared/data-storage.service";
     // for service
     HttpClientModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService], // the service is correctly here
+  providers: [ShoppingListService, RecipeService], // the service is correctly here
   bootstrap: [AppComponent]
 })
 export class AppModule {

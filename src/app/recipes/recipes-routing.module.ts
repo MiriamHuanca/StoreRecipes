@@ -21,6 +21,7 @@ const routes: Routes = [
     ]
   }
 ];
+
 @NgModule({
   imports: [
     RouterModule.forChild(routes)
@@ -29,4 +30,5 @@ const routes: Routes = [
     RouterModule
   ]
 })
-export class RecipesRoutingModule {}
+export class RecipesRoutingModule {
+}

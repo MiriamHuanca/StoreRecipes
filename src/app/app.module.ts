@@ -6,8 +6,6 @@ import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
-import {ShoppingListComponent} from './shopping-list/shopping-list.component';
-import {ShoppingEditComponent} from './shopping-list/shopping-edit/shopping-edit.component';
 import {DropdownDirective} from './shared/dropdown.directive';
 import {GegerarPdfComponent} from './gegerar-pdf/gegerar-pdf.component';
 import {GenerarJspdfComponent} from './generar-jspdf/generar-jspdf.component';
@@ -22,13 +20,12 @@ import {LoadingSpinnerComponent} from './shared/loading-spinner/loading-spinner.
 import {AlertComponent} from './shared/alert/alert.component';
 import {PlaceholderDirective} from './shared/placeholder/placeholder.directive';
 import {RecipesModule} from './recipes/recipes.module';
+import {ShoppingListModule} from './shopping-list/shopping-list.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    ShoppingListComponent,
-    ShoppingEditComponent,
     DropdownDirective,
     // component of pdf
     GegerarPdfComponent,
@@ -51,6 +48,7 @@ import {RecipesModule} from './recipes/recipes.module';
     // module of pdf
     PdfViewerModule,
     RecipesModule,
+    ShoppingListModule,
   ],
   providers: [
     // the service is correctly here

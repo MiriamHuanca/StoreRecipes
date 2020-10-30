@@ -6,7 +6,6 @@ import {Router} from '@angular/router';
 import {AuthResponseData, AuthService} from './auth.service';
 import {AlertComponent} from '../shared/alert/alert.component';
 import {PlaceholderDirective} from '../shared/placeholder/placeholder.directive';
-import {hostViewClassName} from "@angular/compiler";
 
 @Component({
   selector: 'app-auth',

@@ -21,6 +21,7 @@ import {DropdownDirective} from './dropdown.directive';
     LoadingSpinnerComponent,
     PlaceholderDirective,
     DropdownDirective,
+    CommonModule,
   ],
   entryComponents: [
     AlertComponent

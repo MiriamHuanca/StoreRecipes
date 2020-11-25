@@ -10,6 +10,7 @@ import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core.module';
 import {GegerarPdfModule} from './gegerar-pdf/gegerar-pdf.module';
 import {GenerarJspdfModule} from './generar-jspdf/generar-jspdf.module';
+import {LoggingService} from './logging.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,9 @@ import {GenerarJspdfModule} from './generar-jspdf/generar-jspdf.module';
     CoreModule,
     GegerarPdfModule,
     GenerarJspdfModule,
+  ],
+  providers: [
+    LoggingService,
   ],
   bootstrap: [AppComponent]
 })

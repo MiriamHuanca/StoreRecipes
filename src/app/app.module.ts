@@ -8,17 +8,12 @@ import {HeaderComponent} from './header/header.component';
 
 import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core.module';
-import {GegerarPdfModule} from './gegerar-pdf/gegerar-pdf.module';
-import {GenerarJspdfModule} from './generar-jspdf/generar-jspdf.module';
 import {LoggingService} from './logging.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    // component of pdf
-    // GegerarPdfComponent,
-    // GenerarJspdfComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +22,6 @@ import {LoggingService} from './logging.service';
     AppRoutingModule,
     SharedModule,
     CoreModule,
-    GegerarPdfModule,
-    GenerarJspdfModule,
   ],
   providers: [
     LoggingService,

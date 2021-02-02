@@ -75,4 +75,15 @@ Password: **asdasd**
 
 [![Deploy with firebase hosting](https://zeit.co/button)](https://ng-store-recipe-book.web.app/)
 
+## An overview to the project
+
+- The first image is login or sign up, but here we have to enter de **e-mail** and **password** to be part of the choise.
+  ![first view](src/assets/image/1SP.png)
+- The second is when you have to new Recipe, you fill in data and add the ingredients, finally save.
+  ![second view](src/assets/image/2SD.png)
+- Ther third shows you the value you have saved and your photo.
+  ![third view](src/assets/image/3RD.png)
+- The last is the result of all recipes who has saved and changes.
+  ![fourth view](src/assets/image/4FH.png)
+
 <!-- AUTO-GENERATED-CONTENT:END -->

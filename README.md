@@ -16,16 +16,22 @@ This project is recipes store for help you collection your recipes and you have 
     git clone https://github.com/MiriamHuanca/StoreRecipes.git
     ```
 
+1.  **Start dependencies.**
+
+    To install dependencies in the application, on the console type...
+
+    ```shell
+    cd StoreRecipes/
+    npm install
+    ```
+    
 1.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd StoreRecipes/
     ng serve
     ```
-
-1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:4200`!
 
@@ -36,6 +42,15 @@ This project is recipes store for help you collection your recipes and you have 
     ```shell
     ng build --prod
     ```
+
+1.  **Install firebase**
+
+    To install Firebase in the application, on the console type...
+    
+    ```shell
+    npm install -g firebase-tools
+    ```
+
 ## 🧐 What's inside?
 
 A quick look at the top-level files and directories you'll see in a Angular project.
@@ -61,7 +76,7 @@ A quick look at the top-level files and directories you'll see in a Angular proj
 
 6. **`README.md`**: A text file containing useful reference information about your project.
 
-## 🎓 Learning StoreRecipes
+## 🎓 Learning
 
 Looking for more guidance? Full documentation for Angular lives [on the website](https://angular.io/). Here are some places to start:
 

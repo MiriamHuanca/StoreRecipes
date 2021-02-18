@@ -21,7 +21,6 @@ export class ShoppingListComponent implements OnInit, OnChanges {
 
   ngOnInit(): void {
     this.ingredients = this.store.select('shoppingListLR');
-    console.log('ingredients: ', this.ingredients);
     /*this.ingredients = this.shoppingListService.getIngredients();
     this.subscription = this.shoppingListService.ingredientsChanged
       .subscribe((ingredients: Ingredient[]) => {

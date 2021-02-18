@@ -22,7 +22,7 @@ import {shoppingListReducer} from './shopping-list/store/shopping-list.reducer';
     // for service
     HttpClientModule,
     AppRoutingModule,
-    StoreModule.forRoot({shoppingList: shoppingListReducer}),
+    StoreModule.forRoot({shoppingListLR: shoppingListReducer}),
     SharedModule,
     CoreModule,
   ],

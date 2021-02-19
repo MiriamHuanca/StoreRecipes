@@ -1,8 +1,11 @@
-import {Recipe} from './recipe-list/recipe.model';
 import {Injectable} from '@angular/core';
+import {Subject} from 'rxjs';
+import {Store} from '@ngrx/store';
+
+import {Recipe} from './recipe-list/recipe.model';
 import {Ingredient} from '../shared/ingredient.modal';
 import {ShoppingListService} from '../shopping-list/shopping-list.service';
-import {Subject} from 'rxjs';
+import * as ShoppingListActions from '../shopping-list/store/shopping-list.actions';
 
 @Injectable()
 export class RecipeService {
@@ -10,35 +13,8 @@ export class RecipeService {
 
   private recipes: Recipe[] = [];
 
-  /*[
-    new Recipe(
-      'A test Recipe',
-      'This is simply a test',
-      'https://cdn.pixabay.com/photo/2017/07/16/10/43/recipe-2508859_960_720.jpg',
-      [
-        new Ingredient('Meat', 1),
-        new Ingredient('French Fries', 3)
-      ]),
-    new Recipe(
-      'Spaghetti',
-      'Huge Pile Of Spaghetti On Plate And Twirled',
-      'https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2018/09/receta-facil-de-salsa-roja-para-espagueti.jpg',
-      [
-        new Ingredient('Meat', 10),
-        new Ingredient('Spaghetti', 15)
-      ]),
-    {
-      name: 'A test Recipe 2',
-      description: 'This is simply a test 2',
-      imagePath: 'https://tvazteca.brightspotcdn.com/dims4/default/7e6560c/2147483647/strip/true/crop/1068x660+0+0/resize/968x598!/format/jpg/quality/80/?url=https%3A%2F%2Ftvazteca.brightspotcdn.com%2F97%2F7d%2Fcffd3c31ec0d2b9d8f999300cb48%2Fel-conde-de-sandwich.jpg',
-      ingredients: [
-        new Ingredient('Bruns', 2),
-        new Ingredient('Meat', 20),
-      ]
-    },
-  ];*/
-
-  constructor(private slService: ShoppingListService) {
+  constructor(private slService: ShoppingListService,
+              private store: Store<{ shoppingListLR: { ingredients: Ingredient[] } }>) {
   }
 
   setRecipes(recipes: Recipe[]) {
@@ -55,7 +31,7 @@ export class RecipeService {
   }
 
   addIngredientsToShoppingList(ingredient: Ingredient[]) {
-    this.slService.addIngredients(ingredient);
+    this.store.dispatch(new ShoppingListActions.AddIngredients(ingredient));
   }
 
   addRecipe(recipe: Recipe) {

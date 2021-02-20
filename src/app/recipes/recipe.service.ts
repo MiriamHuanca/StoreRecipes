@@ -4,7 +4,6 @@ import {Store} from '@ngrx/store';
 
 import {Recipe} from './recipe-list/recipe.model';
 import {Ingredient} from '../shared/ingredient.modal';
-import {ShoppingListService} from '../shopping-list/shopping-list.service';
 import * as ShoppingListActions from '../shopping-list/store/shopping-list.actions';
 import * as fromShoppingList from '../shopping-list/store/shopping-list.reducer';
 
@@ -14,8 +13,7 @@ export class RecipeService {
 
   private recipes: Recipe[] = [];
 
-  constructor(private slService: ShoppingListService,
-              private store: Store<fromShoppingList.AppState>) {
+  constructor(private store: Store<fromShoppingList.AppState>) {
   }
 
   setRecipes(recipes: Recipe[]) {
